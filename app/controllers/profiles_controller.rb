@@ -1,5 +1,11 @@
 class ProfilesController < ApplicationController
 
+	def index
+		@profiles = Profile.all
+	end
+	
+	
+	
 	def toggle_status
 		if @profile.alumni
 			@profile.student

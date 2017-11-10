@@ -1,0 +1,45 @@
+<%= @profiles.each do |profile| %>  
+ <div class="container">
+  <div class="row">
+    <div class="col s6 m6">
+
+      <div class="card">
+      <div class="card-content">
+        <h4><%= profile.name %></h4>
+
+      <a class='dropdown-button btn' id="button1" href='#' data-activates='dropdown1'>Education</a>
+
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!"><i class="small material-icons right">school</i>Graduated</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Student</a></li>
+      </ul>
+
+
+      <a class='dropdown-button btn' id="button2" href='#' data-activates='dropdown2'>Job Status</a>
+
+      <ul id='dropdown2' class='dropdown-content'>
+        <li><a href="#!"><i class="material-icons right">work</i>Employed</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Seeking Employment</a></li>
+      </ul>
+
+
+      </div>
+      <div class="card-tabs">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab"><a href="#test4">About me</a></li>
+          <li class="tab"><a class="active" href="#test5">Skills</a></li>
+          <li class="tab"><a href="#test6">Contact</a></li>
+
+        </ul>
+      </div>
+        <div class="card-content grey lighten-4" id="whitepart" >
+          <div id="test4"><%= profile.about %></div>
+          <div id="test5"><%= profile.skills %></div>
+          <div id="test6"><%= profile.phone %><br><%= profile.email %><br><%= profile.location %></div>
+        </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<% end %>
