@@ -4,73 +4,64 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-
-
 <head>
 <title><h1>Student Show page</h1></title>
-Student info: Name, picture, interests, bio, description, location, type of work interests 
-
-        toggle status:
-        worker status: looking for work, currently working
-        graduated status: currently schooling, graduation date. 
-
-skills: Ruby, Rails, Java, C++, Python, Front end/Back end, CSS
 
 </head>
-
+<body>
 <%= render partial: 'profile_card' %>
 
-<body>
-link to portfolio
 
-contact info: email, phone, github, insta, twitter, FB, etc.
-
-Skillset, interests, Current projects, Finished projects 
-
-</body>
-
-<footer>
-Thanks for visiting Bottega, we are located in Lehi, UT.
-Bottega contact info-
-</footer>
-
-</html>
 
 <%# header collection %>
 
 <ul class="collection">
     <li class="collection-item avatar">
-      <img src="images/yuna.jpg" alt="" class="circle">
-      <span class="title">Title</span>
+      <i class="material-icons circle">contacts</i>
+      <span class="title">Student details:</span>
       <p>Student Show Page<br>
-         Student info: Name, Picture
+         Thanks for visiting Bottega, we are located in Lehi, UT.
+Bottega contact info-
       </p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
     <li class="collection-item avatar">
-      <i class="material-icons circle">folder</i>
+      <i class="material-icons circle">accessibility</i>
       <span class="title">Work Status</span>
-      <p>Status<br>
-         Looking for work, Currently working
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+      <p>Status <p>
+      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+      <label for="filled-in-box">Currently Looking for Work</label>
+    </p> <br>
+    <input type="checkbox" id="indeterminate-checkbox" />
+      <label for="indeterminate-checkbox">Working for..</label>
+    </p>
+  
+      <a href="#!" class="secondary-content"><i class="material-icons">dashboard</i></a>
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle green">insert_chart</i>
       <span class="title">Student Status</span>
-      <p>Student<br>
-         Currently in School: graduation date, Graduated
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+      <p>Student <p>
+      <input type="checkbox" id="test6" checked="checked" />
+      <label for="test6">Graduated</label>
+    </p><br><p>
+      <input class="with-gap" name="group1" type="radio" id="test3"  />
+      <label for="test3">Current Student</label>
+    </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">dehaze</i></a>
     </li>
     <li class="collection-item avatar">
-      <i class="material-icons circle red">play_arrow</i>
-      <span class="title">Contact</span>
-      <p>First Line <br>
-         Second Line
+      <i class="material-icons circle red">cloud_done</i>
+      <span class="title">Projects</span>
+      <p>Finished Projects<br>
+         In Progress...
       </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+      <a href="#!" class="secondary-content"><i class="material-icons">developer_board</i></a>
     </li>
   </ul>
 
   <%# header collection %>
+
+  </body>
+
+</html>
