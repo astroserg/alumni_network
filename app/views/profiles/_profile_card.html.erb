@@ -3,24 +3,54 @@
     <h2 class="header">Student Profile</h2>
     <div class="card horizontal">
       <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
+        <%= image_tag @profile.img %>
+        
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>Student info: Name, picture, interests, bio, description, location, type of work interests 
+          <p>Student info:  <%= "#{@profile.name}" %>
 </p>
         </div>
+
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">assignment_ind</i>
+      About Me
+      <span class="new badge blue">3</span></div>
+    <div class="collapsible-body"><p> <%= "#{@profile.about}" %> </p><p><%= @profile.location %> </p> <p><%= @profile.relocation %> </p></div>
+  </li>
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">call_end</i>
+      Contact
+      <span class="badge"></span></div>
+    <div class="collapsible-body"><p> <%= @profile.phone %> </p> <p><%= @profile.email %> </p> </div>
+  </li>
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">keyboard</i>
+      Skills
+      <span class="badge"></span></div>
+    <div class="collapsible-body"><p><%= @profile.skills %></p>
+    
         <div class="card-action">
-          <a href="#">Contact</a>
+          <a href="#">GitHub <i class="material-icons circle green">assignment_ind</i> </a>
         </div>
         <div class="card-action">
-          <a href="#">Skills</a>
+          <a href="#">Portfolio <i class="material-icons circle blue">business</i></a>
         </div>
         <div class="card-action">
-          <a href="#">About Me</a>
+          <a href="#">Facebook, Instagram, Twitter <i class="material-icons circle red">call_end</i></a>
         </div>
+    </p></div>
+  </li>
+</ul>
+
+
+
+
+
       </div>
     </div>
   </div>
-
-<%# main body card %>

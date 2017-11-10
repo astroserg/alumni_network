@@ -1,7 +1,9 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:index, :show, :destroy, :update, :edit]
 
-    def show
+
+	  def show
+		  @profile = Profile.find(params[:id])
     end
 
     def index
@@ -52,7 +54,10 @@ class ProfilesController < ApplicationController
         end
     end  
 
-    	def toggle_status
+    def create
+    end
+
+	def toggle_status
 		if @profile.alumni
 			@profile.student
 		elsif @profile.student
